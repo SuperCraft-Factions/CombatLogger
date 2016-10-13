@@ -21,7 +21,7 @@ class TimeMsg extends PluginTask{
         $this->seconds++;
         if($this->seconds === $this->interval){
             if($this->player->isOnline()){
-                $this->player->sendMessage("[CombatLogger] You can now log out.");
+                $this->player->sendMessage("§l§8[SCFCombat]§r§7 You can now log out.");
                 $this->plugin->getServer()->getScheduler()->cancelTask($this->getTaskId());
                 unset($this->plugin->tasks[$this->player->getName()]);
             }
