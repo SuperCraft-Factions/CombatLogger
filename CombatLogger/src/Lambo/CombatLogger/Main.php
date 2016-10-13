@@ -49,7 +49,7 @@ class Main extends PluginBase implements Listener{
     }
 
     private function setTime(Player $player){
-        $msg = "[CombatLogger] Logging out now will cause you to die.\nPlease wait ".$this->interval." seconds.";
+        $msg = "§l§8[SCFCombat]§r§7 Logging out now will cause you to die.\nPlease wait ".$this->interval." seconds.";
         if(isset($this->players[$player->getName()])){
             if((time() - $this->players[$player->getName()]) > $this->interval){
                 $player->sendMessage($msg);
